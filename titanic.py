@@ -9,7 +9,6 @@ import argparse
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
-
 from sklearn.preprocessing import OneHotEncoder, MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
@@ -34,7 +33,7 @@ n_trees = args.n_trees
 
 # API TOKEN
 load_dotenv()
-JETON_API = os.environ.get("JETON_API", "")
+JETON_API = os.environ["JETON_API"]
 
 if JETON_API.startswith("$"):
     print("API token has been configured properly")
